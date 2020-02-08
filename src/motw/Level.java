@@ -7,31 +7,21 @@ public class Level {
     private int maxExp;
     private int currentExp;
     private int levelCount;
-    private Map<String, String> improvement = new TreeMap<>();
+
 
     public void setMaxExp(int maxExp) {
         this.maxExp = maxExp;
     }
-
     public int getMaxExp() {
         return maxExp;
     }
-
     public void setCurrentExp(int currentExp) {
         this.currentExp = currentExp;
     }
+    public int getCurrentExp() { return currentExp; }
+    public void setLevelCount(int levelCount) { this.levelCount = levelCount; }
+    public int getLevelCount() { return levelCount; }
 
-    public int getCurrentExp() {
-        return currentExp;
-    }
-
-    public void setImprovement(Map<String, String> improvement) {
-        this.improvement = improvement;
-    }
-
-    public Map<String, String> getImprovement() {
-        return improvement;
-    }
     public int levelUp(){
         if(currentExp < maxExp)
             currentExp++;
@@ -46,15 +36,9 @@ public class Level {
             currentExp--;
         return currentExp;
     }
-    public void addImprovement(String improvementName, String improvementDescription){
-        improvement.put(improvementName, improvementDescription);
-    }
-    public void removeImprovement(int improvementLevel){
-        improvement.remove(improvementLevel);
-    }
+
     @Override
     public String toString(){
-        return "Level " + currentExp + " out of " + maxExp +
-                "\n Improvements " + improvement;
+        return "Level " + currentExp + " out of " + maxExp + " and have leveled " + levelCount + " times.";
     }
 }

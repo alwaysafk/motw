@@ -26,9 +26,7 @@ public class Main {
         Level myHunterLevel = new Level();
             myHunterLevel.setCurrentExp(0);
             myHunterLevel.setMaxExp(5);
-            myHunterLevel.addImprovement("Let’s Get Out Of Here!", "If you can protect someone " +
-                    "by telling them what to do, or by leading them out," +
-                    "roll +Charm instead of +Tough");
+            myHunterLevel.setLevelCount(1);
             myHunter.setLevel(myHunterLevel);
 
         myHunter.addRating("CHARM",3);
@@ -41,6 +39,9 @@ public class Main {
         testGearTag.add("innocuous");
         testGearTag.add("messy");
         myHunter.addGear("Golf club", testGearTag);
+        myHunter.addMove("Let’s Get Out Of Here!", "If you can protect someone " +
+                "by telling them what to do, or by leading them out," +
+                "roll +Charm instead of +Tough");
 
         System.out.println(myHunter.getName() + "\n\t  " +
                 myHunter.getPlaybook() + "\n\t  " +
