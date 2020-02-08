@@ -4,12 +4,10 @@ public class Improvements {
     private boolean advanced;
     private String improvementName;
     private String improvementDescription;
+    private int improvementCeiling;
+    private int improvementIncrease;
 
-    public Improvements(boolean advanced,String improvementName,String improvementDescription){
-        this.advanced = advanced;
-        this. improvementName = improvementName;
-        this. improvementDescription = improvementDescription;
-    }
+
     public void setAdvanced(boolean advanced){
         this.advanced = advanced;
     };
